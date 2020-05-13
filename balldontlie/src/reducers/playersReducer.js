@@ -5,8 +5,13 @@ const initialState = {
 }
 
 export const playersReducer = (state = initialState, action) => {
-    switch(action.typ){
-        default: 
+    switch(action.type){
+        case "FETCH_PLAYER_START":
+            return{
+                ...state,
+                isFetching:true
+            }
+        default:
             return state;
     }
 }
