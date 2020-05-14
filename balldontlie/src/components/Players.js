@@ -9,13 +9,18 @@ useEffect(() => {
     props.fetchPlayers()
 },[])
 
-
+console.log(props.players.players.data, "#####")
     return (
-        <div>
+        <>
             <h1>
                 Welcome to the NBA! <span role="img" aria-label="basketball">🏀</span>
             </h1>
-        </div>
+            <div>
+            {props.players.players.map(player => (
+                <p>{player.first_name} {player.last_name} {player.team.full_name}</p>)
+            )}
+            </div>
+        </>
     )
 }
 
