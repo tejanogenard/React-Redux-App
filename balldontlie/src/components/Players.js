@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
 import  { fetchPlayers }  from '../actions/playersAction'
 import PlayerCard from "./PlayerCard"
 
@@ -10,7 +9,6 @@ useEffect(() => {
     props.fetchPlayers()
 },[])
 
-console.log(props.players.players.data, "#####")
     return (
         <>
             <h1>
