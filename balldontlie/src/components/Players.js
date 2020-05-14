@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import  { fetchPlayers }  from '../actions/playersAction'
+import PlayerCard from "./PlayerCard"
 
 const Players = props => {
 
@@ -17,8 +18,8 @@ console.log(props.players.players.data, "#####")
             </h1>
             <div>
             {props.players.players.map(player => (
-                <p>{player.first_name} {player.last_name} {player.team.full_name}</p>)
-            )}
+                    <PlayerCard player={player} />
+                ))}
             </div>
         </>
     )
