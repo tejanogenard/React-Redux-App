@@ -17,6 +17,13 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.player-card {
+  background-color: cadetblue;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
 }
